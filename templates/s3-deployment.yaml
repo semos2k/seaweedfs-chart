@@ -110,8 +110,8 @@ spec:
               {{- end }}
               -filer={{ template "seaweedfs.name" . }}-filer-client.{{ .Release.Namespace }}:{{ .Values.filer.port }}
           volumeMounts:
-            - name: logs
-              mountPath: "/logs/"
+            #- name: logs
+            #  mountPath: "/logs/"
             - mountPath: /etc/sw
               name: config-users
               readOnly: true
